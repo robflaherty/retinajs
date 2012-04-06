@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width; initial-scale=1.0;" />  
 </head>
 <body>
-  
   <header>
     <div class="container">
       <a href="/" class="logo">retina.js</a>
@@ -46,7 +45,7 @@
         <p>When your users load a page, retina.js checks each image on the page to see if there is a high-resolution version of that image on your server. If a high-resolution variant exists, the script will swap in that image in-place.</p>
 
         <h3>What it looks for</h3>
-        <p>The script assumes you use <a href="http://developer.apple.com/library/ios/#documentation/2DDrawing/Conceptual/DrawingPrintingiOS/SupportingHiResScreens/SupportingHiResScreens.html">Apple's prescribed high-resolution modifier (@2x)</a> to denote high-resolution variants on your server.</p>
+        <p>The script assumes you use <a href="http://developer.apple.com/library/ios/#documentation/2DDrawing/Conceptual/DrawingPrintingiOS/SupportingHiResScreens/SupportingHiResScreens.html">Apple's prescribed high-resolution modifier (@2x)</a> to denote high-resolution image variants on your server.</p>
 
         <p>For example, if you have an image on your page that looks like this:<br />
         <code>&lt;img src=&quot;/images/my_image.png&quot; /&gt;</code>
@@ -61,6 +60,9 @@
         <h2>How to use</h2>
         
         <h3>JavaScript</h3>
+        
+        <p>The JavaScript helper script automatically replaces images on your page with high-resolution variants (if they exist). To use it, <a href="#">download the script</a> and include it at the bottom of your page.</p>
+        
         <ol>
           <li>Place the <code>retina.js</code> file on your server</li>
           <li>
@@ -73,15 +75,29 @@
           <li>That's it!</li>
         </ol>
         
+        
+        
+        
         <h3>LESS</h3>
+        
+        <p>The LESS CSS mixin is a helper for applying high-resolution background images in your stylesheet. You provide it with an image path and the dimensions of the original-resolution image. The mixin creates a media query spefically for Retina displays, changes the background image for the selector elements to use the high-resolution (@2x) variant and applies a <code>background-size</code> of the original image in order to maintain proper dimensions. To use it, <a href="#">download the mixin</a>, import or include it in your LESS stylesheet, and apply it to elements of your choice.</p>
+
+        <h4>Steps:</h4>
+        <p>
+          <strong>Syntax:</strong><br />
+          <code>.at2x(@path, [optional] @width: auto, [optional] @height: auto);</code>
+        </p>
+        
+        <h4>Steps:</h4>
+        
         <ol>
           <li>Add the <code>.at2x()</code> mixin from <code>retina.less</code> to your LESS stylesheet</li>
           <li>
-            In your stylesheet, call the <code>.at2x()</code> mixin anywhere instead of using <code>background-image:</code>
+            In your stylesheet, call the <code>.at2x()</code> mixin anywhere instead of using <code>background-image</code>
             
             <br /><br />
             
-<code>#logo {
+<code class="big">#logo {
   .at2x('/images/my_image.png', 200px, 100px);
 }</code>
             
@@ -91,7 +107,7 @@
 
             <br /><br />
             
-<code>#logo {
+<code class="big">#logo {
   background-image: url('/images/my_image.png');
 }
 
@@ -124,9 +140,22 @@
           <a href="#" class="btn btn-large btn-primary">http://github.com/imulus/retinajs &nbsp;<i class="icon-chevron-right"></i></a>
         </p>
       </section>
-
+      
+      
+      <section>
+        <p>Made with love by <a href="http://imulus.com" rel="retinajs">Imulus</a></p>
+        <p>Props to <a href="http://www.flickr.com/zachd1_618/">Zach Dischner</a> for the kickass background photo</p>
+      </section>      
     </div>
 
+
+    <footer>
+      <div class="container">
+        <a href="http://imulus.com" rel="retinajs" class="logo">
+          <img src="/images/logos/imulus.png" />
+        </a>
+      </div>
+    </footer>
 
     
 
@@ -135,8 +164,10 @@
   
   
   
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="/application.js"></script>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/application.js"></script>
 </body>
 </html>
 
