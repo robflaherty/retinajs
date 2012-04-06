@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fancy SEO-boosted title goes here</title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/application.css" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0;" />  
+</head>
+<body>
+  
+  <header>
+    <div class="container">
+      <a href="/" class="logo">retina.js</a>
+      <nav>
+        <a href="#">how it works</a>
+        <b>/</b>
+        <a href="#">how to use</a>
+        <b>/</b>
+        <a href="#">download</a>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="container">
+    <section class="intro">
+      <h1>
+        <span>Retina graphics</span> 
+        <span class="light">for your website</span>
+      </h1>
+      
+      <p>
+        retina.js is an open-source script that makes it easy to serve <br />
+        high resolution images to devices with retina displays
+      </p>
+      <p>
+        <a href="#" class="btn btn-large btn-primary">How it works &nbsp;<i class="icon-chevron-down"></i></a>
+      </p>
+    </section>
+  </div>
+  
+
+    <div class="container dark">
+      <section>
+        <h2>How it works</h2>
+        <p>When your users load a page, retina.js checks each image on the page to see if there is a high-resolution version of that image on your server. If a high-resolution variant exists, the script will swap in that image in-place.</p>
+
+        <h3>What it looks for</h3>
+        <p>The script assumes you use <a href="http://developer.apple.com/library/ios/#documentation/2DDrawing/Conceptual/DrawingPrintingiOS/SupportingHiResScreens/SupportingHiResScreens.html">Apple's prescribed high-resolution modifier (@2x)</a> to denote high-resolution variants on your server.</p>
+
+        <p>For example, if you have an image on your page that looks like this:<br />
+        <code>&lt;img src=&quot;/images/my_image.png&quot; /&gt;</code>
+        </p>
+
+        <p>The script will check your server to see if an alternative image exists at this path:<br />
+        <code>&quot;/images/my_image@2x.png&quot;</code>
+        </p>
+      </section>    
+      
+      <section>
+        <h2>How to use</h2>
+        
+        <h3>JavaScript</h3>
+        <ol>
+          <li>Place the <code>retina.js</code> file on your server</li>
+          <li>
+            Include the script on your page
+            <br /><br />
+            <code>&lt;script type=&quot;text/javascript&quot; src=&quot;/scripts/retina.js&quot;&gt;&lt;/script&gt;</code>
+            <br /><br />
+            (put it at the bottom of your template, before your closing <code>&lt;/body&gt;</code> tag)
+          </li>    
+          <li>That's it!</li>
+        </ol>
+        
+        <h3>LESS</h3>
+        <ol>
+          <li>Add the <code>.at2x()</code> mixin from <code>retina.less</code> to your LESS stylesheet</li>
+          <li>
+            In your stylesheet, call the <code>.at2x()</code> mixin anywhere instead of using <code>background-image:</code>
+            
+            <br /><br />
+            
+<code>#logo {
+  .at2x('/images/my_image.png', 200px, 100px);
+}</code>
+            
+            <br /><br />
+            
+            Will compile to:
+
+            <br /><br />
+            
+<code>#logo {
+  background-image: url('/images/my_image.png');
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  #logo {
+    background-image: url('/images/my_image.png');
+    background-size: 200px 100px;
+  }
+}</code>            
+
+          </li>
+        </ol>
+        
+      </section>      
+
+
+      <section>
+        <h2>Download</h2>
+        <p>
+          <a href="#" class="btn btn-large btn-primary"><i class="icon-download"></i> Download zip</a>
+          <a href="#" class="btn btn-large btn-primary"><i class="icon-download"></i> Download tar.gz</a>          
+        </p>
+      </section>
+
+
+      <section>
+        <h2>Contribute</h2>
+        <p>We'd love your help. <a href="http://github.com/imulus/retinajs">Fork us</a> so we can make retina graphics easier for everyone.</p>
+        <p>
+          <a href="#" class="btn btn-large btn-primary">http://github.com/imulus/retinajs &nbsp;<i class="icon-chevron-right"></i></a>
+        </p>
+      </section>
+
+    </div>
+
+
+    
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="/application.js"></script>
+</body>
+</html>
+

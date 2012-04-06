@@ -1,0 +1,177 @@
+@iconSpritePath:      "/images/icons/glyphicons-halflings.png";
+@iconWhiteSpritePath: "/images/icons/glyphicons-halflings-white.png";
+
+
+@import "bootstrap";
+@linkColor: #334f98;
+@import "../vendor/font-awesome/font-awesome";
+@import "../lib/vamp/sprites";
+
+.at2x(@path, @w: auto, @h: auto) {
+  background-image: url(@path);
+  @at2x_path: ~`"@{path}".split('.').slice(0, "@{path}".split('.').length - 1).join(".") + "@2x" + "." + "@{path}".split('.')["@{path}".split('.').length - 1]`;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: url(@at2x_path);
+    background-size: @w @h;
+  }  
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: 300;
+}
+
+
+body {
+  color: #fff;
+  background: #000;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  .at2x('/images/backgrounds/bg.jpg', 1400px, 934px);  
+}
+
+
+h1 {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: -3px;
+  font-size: 75px;
+  line-height: 1;
+  margin-bottom: 30px;
+  
+  span {
+    display: block;
+          
+    &.light {
+      font-weight: 200;
+      color: #ddd;
+    }
+  }
+}
+
+h2 {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 18px;
+}
+
+h3 {
+  margin-bottom: 12px;
+}
+
+ul, 
+ol, 
+p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 27px;  
+  color: rgba(255,255,255,0.5);
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+  
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+code {
+  display: inline-block;
+  color: #fff;
+  margin: 6px 0;
+  background: #000;
+  border-color: rgba(255,255,255,0.2);
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;  
+}
+
+
+.container {
+  width: 728px;  
+}
+
+.dark {
+  width: 648px;
+  padding: 40px;
+  background: rgba(0,0,0,0.8);
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+header {
+
+  > .container {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }  
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: #aaa;
+      text-decoration: none;
+    }
+  }
+  
+  .logo {
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -1px;
+    float: left;
+  }
+  
+  nav {
+    float: right;
+    line-height: 25px;
+    height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;    
+    position: relative;
+
+
+    a {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    
+    b {
+      display: inline-block;
+      width: 1px;
+      height: 75px;
+      position: relative;
+      top: -25px;
+      text-indent: -9999em;
+      background: rgba(255,255,255,0.3);
+      margin: 0 15px;
+      .rotate(18deg);
+    }
+  }
+}
+
+
+
+section.intro {
+  margin: 60px 0 120px;
+  p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+
+
+
+
