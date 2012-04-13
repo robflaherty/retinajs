@@ -7663,7 +7663,8 @@ html {
 body {
   color: #fff;
   position: relative;
-  background: rgba(51, 69, 152, 0.1);
+  background-color: #000;
+  background-color: rgba(51, 69, 152, 0.1);
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
@@ -7691,7 +7692,8 @@ h1 span.light {
   color: #ddd;
 }
 h2 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #333;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
   margin-bottom: 18px;
 }
 h3 {
@@ -7703,6 +7705,7 @@ p {
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 27px;
+  color: #999;
   color: rgba(255, 255, 255, 0.5);
 }
 a {
@@ -7716,9 +7719,8 @@ a:hover {
 code {
   display: inline-block;
   color: #fff;
-  /*  margin: 6px 0;*/
-
   background: #000;
+  border-color: #333;
   border-color: rgba(255, 255, 255, 0.2);
   white-space: pre-wrap;
   word-break: break-all;
@@ -7733,6 +7735,7 @@ code.big {
 .dark {
   width: 648px;
   padding: 40px;
+  background: #000;
   background: rgba(0, 0, 0, 0.8);
 }
 section {
@@ -7743,7 +7746,8 @@ section:last-child {
 }
 header > .container {
   padding: 40px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #333;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
 }
 header a {
   color: #fff;
@@ -7782,6 +7786,7 @@ header nav b {
   position: relative;
   top: -25px;
   text-indent: -9999em;
+  background: #555;
   background: rgba(255, 255, 255, 0.3);
   margin: 0 15px;
   -webkit-transform: rotate(18deg);
