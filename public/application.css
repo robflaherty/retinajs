@@ -7668,11 +7668,11 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
-  background-image: url('/images/backgrounds/bg.jpg');
+  background-image: url('http://retinajs.s3.amazonaws.com/images/backgrounds/bg.jpg');
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   body {
-    background-image: url('/images/backgrounds/bg@2x.jpg');
+    background-image: url('http://retinajs.s3.amazonaws.com/images/backgrounds/bg@2x.jpg');
     background-size: 1400px 934px;
   }
 }
